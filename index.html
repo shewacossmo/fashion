@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHEWA'S FASHION</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+            color: black;
+            margin-top: 20px;
+            font-size: 2rem;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            object-fit: cover;
+            margin: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .modal img {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80%;
+        }
+        .modal span {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .modal span:hover {
+            color: #FFD700;
+        }
+        .contact {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1rem;
+            color: white;
+        }
+        .contact a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            .gallery img {
+                max-width: 150px;
+            }
+            .contact {
+                font-size: 0.9rem;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2rem;
+            }
+            .gallery img {
+                max-width: 100px;
+            }
+            .contact {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>SHEWA'S FASHION</h1>
+    <div class="gallery">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 1.jpg" alt="Image 1" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 2.jpg" alt="Image 2" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 3.jpg" alt="Image 3" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 4.jpg" alt="Image 4" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 5.jpg" alt="Image 5" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 6.jpg" alt="Image 6" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 7.jpg" alt="Image 7" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 8.jpg" alt="Image 8" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 9.jpg" alt="Image 9" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 10.jpg" alt="Image 10" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 11.jpg" alt="Image 11" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 12.jpg" alt="Image 12" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 13.jpg" alt="Image 13" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 14.jpg" alt="Image 14" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 15.jpg" alt="Image 15" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 16.jpg" alt="Image 16" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 17.jpg" alt="Image 17" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 18.jpg" alt="Image 18" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 19.jpg" alt="Image 19" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 20.jpg" alt="Image 20" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 21.jpg" alt="Image 21" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 22.jpg" alt="Image 22" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 23.jpg" alt="Image 23" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 24.jpg" alt="Image 24" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 25.jpg" alt="Image 25" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 26.jpg" alt="Image 26" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 27.jpg" alt="Image 27" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 28.jpg" alt="Image 28" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 29.jpg" alt="Image 29" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 30.jpg" alt="Image 30" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 31.jpg" alt="Image 31" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 32.jpg" alt="Image 32" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 33.jpg" alt="Image 33" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 34.jpg" alt="Image 34" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 35.jpg" alt="Image 35" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 36.jpg" alt="Image 36" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 37.jpg" alt="Image 37" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 38.jpg" alt="Image 38" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 39.jpg" alt="Image 39" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 40.jpg" alt="Image 40" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 41.jpg" alt="Image 41" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 42.jpg" alt="Image 42" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 43.jpg" alt="Image 43" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 44.jpg" alt="Image 44" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 45.jpg" alt="Image 45" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 46.jpg" alt="Image 46" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 47.jpg" alt="Image 47" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 48.jpg" alt="Image 48" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 49.jpg" alt="Image 49" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 50.jpg" alt="Image 50" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 51.jpg" alt="Image 51" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 52.jpg" alt="Image 52" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 53.jpg" alt="Image 53" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 54.jpg" alt="Image 54" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 55.jpg" alt="Image 55" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 56.jpg" alt="Image 56" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 57.jpg" alt="Image 57" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 58.jpg" alt="Image 58" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 59.jpg" alt="Image 59" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 60.jpg" alt="Image 60" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 61.jpg" alt="Image 61" onclick="openModal(this)">
+        <img src="https://raw.githubusercontent.com/shewacossmo/fashion/refs/heads/main/img/Image 62.jpg" alt="Image 62" onclick="openModal(this)">
+    </div>
+    <div class="contact">
+        <p>Contact us: <a href="mailto:shewa.hailu@gmail.com">shewa.hailu@gmail.com</a> | Phone: 0923864110</p>
+        <p>Location: Maraki Campus, Gondar</p>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        function openModal(img) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
